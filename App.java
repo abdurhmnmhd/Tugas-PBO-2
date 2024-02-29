@@ -1,18 +1,43 @@
-/**
- * App
- */
-public class App {
+public class Segitiga {
     public static void main(String[] args) {
-        Square square = new Square();
-        square.setSisi(5);
-        square.hitungLuas(); // Hitung luas
-        square.hitungKeliling(); // Hitung keliling
-        
-        double luas = square.getLuas();
-        double keliling = square.getKeliling();
-        
-        System.out.println("Luas Persegi dengan sisi:"+ square.getLuas() + " "+"adalah" +" "+ luas);
-        System.out.println("Keliling Persegi dengan sisi:"+ square.getKeliling() + " "+"adalah" +" "+ keliling);
-        
-    } 
+        Triangle triangle = new Triangle(40,20);
+
+        // triangle.setAlas(4);
+        // triangle.setTinggi(5);
+        // triangle.setLuas();
+
+        int hasil = triangle.getLuas();
+        System.out.println("Hasil dari luas segitga adalah : " + hasil);
+    }
+}
+
+class Triangle {
+
+    private int alas;
+    private int tinggi;
+
+    //CONSTRUCTOR
+    public Triangle(int alas, int tinggi) {
+        this.tinggi = tinggi;
+        this.alas = alas;
+    }
+    
+    //SETTER
+    public void setAlas (int value) {
+        this.alas = value;
+    }
+
+    public void setTinggi (int value) {
+        this.tinggi = value;
+    }
+
+    // public void setLuas () {
+    //     int luas = this.alas * this.tinggi / 2;
+    //     System.out.println(luas);
+    // }
+
+    //GETTER
+    public int getLuas () {
+        return this.alas * this.tinggi / 2;
+    }
 }
