@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class book {
+public class Book {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Books book = new Books("M Abdurahman", "Art of War", 40000.00, 1);
